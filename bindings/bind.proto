@@ -1,0 +1,17 @@
+syntax ="proto3";
+
+package bind;
+
+option go_package="./bindings";
+
+message ProblemRequest{
+    string title_slug=1;
+}
+
+message ProblemStatement{
+    string statement =1;
+}
+
+service StatementService{
+    rpc GetStatement(ProblemRequest)returns (ProblemStatement){}
+}
