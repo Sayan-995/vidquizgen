@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VidQuizGen - Level Up Your Coding Skills</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span class="logo-text">Vid<span class="highlight1">Quiz</span>Gen</span>
+            </div>
+            <div class="tagline">
+                <span>Code Smarter, Not Harder</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="hero">
+                <h1>Find Coding Problems From Your <span class="highlight1">Fav Videos</span></h1>
+                <p>Paste a YouTube DSA tutorial link and get LeetCode problems to practice!</p>
+            </div>
+
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="videoUrl" placeholder="Paste YouTube URL here...">
+                    <button id="searchBtn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="example-text">
+                    Try: <a href="#" class="example-link">https://www.youtube.com/watch?v=AE39gJYuRog</a>
+                </div>
+            </div>
+
+            <div id="loader" class="loader hidden">
+                <div class="loader-icon">
+                    <i class="fas fa-cog fa-spin"></i>
+                </div>
+                <p>Finding the perfect problems for you...</p>
+            </div>
+
+            <div id="results" class="results hidden">
+                <h2>💡 Recommended Problems:</h2>
+                <div id="problemsList" class="problems-list">
+                    <!-- Results will be populated here -->
+                </div>
+            </div>
+
+            <div id="error" class="error hidden">
+                <i class="fas fa-exclamation-circle"></i>
+                <p id="errorMessage"></p>
+            </div>
+        </main>
+
+        <footer>
+            <p>Made with 💻 by Team VidQuizGen</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
